@@ -1,0 +1,44 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+msgid "Gecoos AC"
+msgstr "集客AC控制器"
+
+msgid "Batch management Gecoos AP,Default password:admin"
+msgstr "批量集中管理集客AP，默认密码：admin"
+
+msgid "Global Settings"
+msgstr "全局设置"
+
+msgid "Enabled"
+msgstr "启用"
+
+msgid "Set the AC access port"
+msgstr "设置访问端口"
+
+msgid "Upload dir path"
+msgstr "上传目录"
+
+msgid "The path to upload AP upgrade firmware"
+msgstr "存放AP升级固件的路径"
+
+msgid "Database dir path"
+msgstr "数据库目录"
+
+msgid "The path to store the config database"
+msgstr "存放配置数据库的路径"
+
+msgid "Enable Log""
+msgstr "启用日志"
+
+msgid "The GecoosAC service is running."
+msgstr "集客AC控制器 运行中"
+
+msgid "The GecoosAC service is not running."
+msgstr "集客AC控制器 未运行"
+
+msgid "Open the mgmt page"
+msgstr "打开管理页面"
+
+msgid "Collecting data..."
+msgstr "收集数据..."

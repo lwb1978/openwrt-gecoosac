@@ -7,7 +7,7 @@ function index()
 	end
 	entry({"admin", "services"}, firstchild(), _("services") , 45).dependent = false
 	local page
-	page = entry({"admin", "services", "gecoosac"}, cbi("gecoosac"), _("集客AC控制器"), 100)
+	page = entry({"admin", "services", "gecoosac"}, cbi("gecoosac"), _("Gecoos AC"), 100)
 	page.dependent = true
 	entry({"admin","services","gecoosac","status"},call("act_status")).leaf=true
 end

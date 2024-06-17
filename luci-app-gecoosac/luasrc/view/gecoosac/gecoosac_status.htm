@@ -4,10 +4,10 @@ XHR.poll(1, '<%=url([[admin]], [[services]], [[gecoosac]], [[status]])%>', null,
 		var tb = document.getElementById('gecoosac_status');
 		if (data && tb) {
 			if (data.running) {
-				var links = '<font color=green>集客AC控制器 <%:运行中%></font><input class="cbi-button mar-10" type="button" value="<%:打开管理界面%>" onclick="openClient();" />';
+				var links = '<font color=green><%:The GecoosAC service is running.%></font><input class="cbi-button mar-10" type="button" value="<%:Open the mgmt page%>" onclick="openClient();" />';
 				tb.innerHTML = links;
 			} else {
-				tb.innerHTML = '<font color=red>集客AC控制器 <%:未运行%></font>';
+				tb.innerHTML = '<font color=red><%:The GecoosAC service is not running.%></font>';
 			}
 		}
 	}
