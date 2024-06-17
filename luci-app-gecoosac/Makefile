@@ -11,7 +11,7 @@ PKG_RELEASE:=1
 
 LUCI_TITLE:=LuCI Support for gecoosac
 LUCI_DEPENDS:=+luci-compat +coreutils-nohup +gecoosac
-LUCI_PKGARCH:=@(aarch64||arm||i386||mips||mipsel||x86_64)
+LUCI_PKGARCH:=all
 
 define Package/$(PKG_NAME)/conffiles
 /etc/gecoosac
