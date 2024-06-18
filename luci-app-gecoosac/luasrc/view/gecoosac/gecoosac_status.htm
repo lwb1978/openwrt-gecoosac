@@ -1,10 +1,13 @@
+
 <script type="text/javascript">//<![CDATA[
-XHR.poll(1, '<%=url([[admin]], [[services]], [[gecoosac]], [[status]])%>', null,
+var Port = ""
+XHR.poll(3, '<%=url([[admin]], [[services]], [[gecoosac]], [[status]])%>', null,
 	function(x, data) {
 		var tb = document.getElementById('gecoosac_status');
 		if (data && tb) {
+			Port = data.port;
 			if (data.running) {
-				var links = '<font color=green><%:The GecoosAC service is running.%></font><input class="cbi-button mar-10" type="button" value="<%:Open the mgmt page%>" onclick="openClient();" />';
+				var links = '<font color=green><%:The GecoosAC service is running.%></font><input class="cbi-button cbi-button-reload " type="button" value="<%:Open the mgmt page%>" onclick="openClient();" />';
 				tb.innerHTML = links;
 			} else {
 				tb.innerHTML = '<font color=red><%:The GecoosAC service is not running.%></font>';
@@ -14,10 +17,9 @@ XHR.poll(1, '<%=url([[admin]], [[services]], [[gecoosac]], [[status]])%>', null,
 );
 
 function openClient() {
-	var clientPort = window.document.getElementById("cbid.gecoosac.config.port").value
-	var url = window.location.protocol + "//" + window.location.hostname + ":" + clientPort;
+	var url = "http://" + window.location.hostname + ":" + Port;
 	window.open(url);
-};
+}
 //]]>
 </script>
 <style>.mar-10 {margin-left: 50px; margin-right: 10px;}</style>

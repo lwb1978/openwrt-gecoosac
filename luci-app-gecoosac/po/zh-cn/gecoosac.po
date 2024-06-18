@@ -10,8 +10,8 @@ msgstr "批量集中管理集客AP，默认密码：admin"
 msgid "Global Settings"
 msgstr "全局设置"
 
-msgid "Enabled"
-msgstr "启用"
+msgid "Enabled AC"
+msgstr "启用集客AC"
 
 msgid "Set the AC access port"
 msgstr "设置访问端口"
@@ -28,7 +28,7 @@ msgstr "数据库目录"
 msgid "The path to store the config database"
 msgstr "存放配置数据库的路径"
 
-msgid "Enable Log""
+msgid "Enable Log"
 msgstr "启用日志"
 
 msgid "The GecoosAC service is running."

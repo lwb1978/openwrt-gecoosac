@@ -1,3 +1,4 @@
+
 m = Map("gecoosac", translate("Gecoos AC"), translate("Batch management Gecoos AP,Default password:admin"))
 
 m:section(SimpleSection).template  = "gecoosac/gecoosac_status"
@@ -6,7 +7,7 @@ s = m:section(TypedSection, "gecoosac", translate("Global Settings"))
 s.addremove = false
 s.anonymous = true
 
-enable = s:option(Flag, "enabled", translate("Enabled"))
+enable = s:option(Flag, "enabled", translate("Enabled AC"))
 enable.rmempty = false
 
 o = s:option(Value, "port", translate("Set the AC access port"))
