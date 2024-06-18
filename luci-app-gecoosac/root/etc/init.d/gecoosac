@@ -13,7 +13,7 @@ init_conf() {
 	config_load "gecoosac"
 	config_get "program_path" "config" "program_path" "/usr/bin/gecoosac"
 	config_get "db_dir" "config" "db_dir" "/etc/gecoosac/"
-	config_get "upload_dir" "config" "upload_dir" "/etc/gecoosac/upload/"
+	config_get "upload_dir" "config" "upload_dir" "/tmp/gecoosac/upload/"
 	config_get "enabled" "config" "enabled" "0"
 	config_get "port" "config" "port" "60650"
 	config_get "log" "config" "log" "0"

@@ -17,8 +17,8 @@ o.datatype    = "port"
 o.rmempty     = false
 
 o = s:option(Value, "upload_dir", translate("Upload dir path"), translate("The path to upload AP upgrade firmware"))
-o.placeholder = "/etc/gecoosac/upload/"
-o.default     = "/etc/gecoosac/upload/"
+o.placeholder = "/tmp/gecoosac/upload/"
+o.default     = "/tmp/gecoosac/upload/"
 o.rmempty     = false
 
 o = s:option(Value, "db_dir", translate("Database dir path"), translate("The path to store the config database"))
