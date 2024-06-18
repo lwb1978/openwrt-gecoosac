@@ -32,7 +32,7 @@ msgid "Enable Log"
 msgstr "启用日志"
 
 msgid "The GecoosAC service is running."
-msgstr "集客AC控制器 运行中"
+msgstr "集客AC控制器 运行中 "
 
 msgid "The GecoosAC service is not running."
 msgstr "集客AC控制器 未运行"
