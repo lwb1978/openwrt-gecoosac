@@ -16,7 +16,7 @@ end
 
 function act_status()
 	local e = {}
-	local binpath = uci:get("gecoosac", "config", "program_path") or "/usr/bin/gecoosac"
+	local binpath = uci:get("gecoosac", "config", "program_path") or "/usr/bin/gecoosac-1.0"
 	e = {
 		running = luci.sys.call("pgrep " .. binpath .. " >/dev/null") == 0,
 		port = uci:get("gecoosac", "config", "port")

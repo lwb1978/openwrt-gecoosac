@@ -5,7 +5,16 @@ msgid "Gecoos AC"
 msgstr "集客AC控制器"
 
 msgid "Batch management Gecoos AP,Default password:admin"
-msgstr "批量集中管理集客AP，默认密码：admin"
+msgstr "批量集中管理集客 AP，默认密码：admin"
+
+msgid "The current AC version %s, only supports AP 7.5 and below."
+msgstr "当前 AC 版本 %s ，仅支持 AP 7.5 及以下版本。"
+
+msgid "The current AC version %s, only supports AP 7.6 and above."
+msgstr "当前 AC 版本 %s ，仅支持 AP 7.6 及以上版本。"
+
+msgid "The AC program does not exist, please check."
+msgstr "AC 程序不存在，请检查。"
 
 msgid "Global Settings"
 msgstr "全局设置"
