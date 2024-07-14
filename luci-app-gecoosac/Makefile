@@ -10,7 +10,7 @@ PKG_VERSION:=2.1
 PKG_RELEASE:=1
 
 LUCI_TITLE:=LuCI Support for gecoosac
-LUCI_DEPENDS:=+luci-compat +gecoosac-2.1 -gecoosac-1.0
+LUCI_DEPENDS:=+luci-compat +gecoosac-2.1
 LUCI_PKGARCH:=all
 
 define Package/$(PKG_NAME)/conffiles
