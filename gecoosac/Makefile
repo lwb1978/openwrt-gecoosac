@@ -1,27 +1,27 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gecoosac
-PKG_VERSION:=2.1
+PKG_VERSION:=2.1.1
 PKG_RELEASE:=1
 
 ifeq ($(ARCH),aarch64)
   PKG_ARCH:=ac_linux_arm64
-  PKG_HASH:=3c70bc50dc328d49fd6e6558f5a18712b3fc402f975560fbc490025408d6b5a5
+  PKG_HASH:=936dc3a97ff7cb8972cb2a699b59a89f19085815380ed53d0633c2dd2a3376a3
 else ifeq ($(ARCH),arm)
   PKG_ARCH:=ac_linux_arm
-  PKG_HASH:=137d0e2a31182beecb28baab7bf4f3d80496d6fb98733b440754d18f93cd3b70
+  PKG_HASH:=8c436588cf73f819b94784db9d30197153dadbb4ffc90a534f894ea31df5a8a2
 else ifeq ($(ARCH),mips)
   PKG_ARCH:=ac_linux_mips
-  PKG_HASH:=cff5509d11253d30c8f88b3d5103f1e2edb9a46bd9dd36a5ed380bbe071c1023
+  PKG_HASH:=6e9ec5b86e7970ef932500efd395114861d3437fa83a8525ab35c964066eced7
 else ifeq ($(ARCH),mipsel)
-  PKG_ARCH:=ac_linux_mipsel
-  PKG_HASH:=9d0ee8f1a09435c54b7b5de19dfe5f992b8d6f31638056822467b0b43aea6ab7
+  PKG_ARCH:=ac_linux_mipsle
+  PKG_HASH:=aa29cebf606fcefb3c5be3879fa3c0501f8f2a374657952e30617ba417ff42ee
 else ifeq ($(ARCH),i386)
   PKG_ARCH:=ac_linux_386
-  PKG_HASH:=0edc304f71715e71bc8e3f7f3317ae9ce18df713da6a3f584980461362eb6621
+  PKG_HASH:=3de8b4ce22bfc1804b8d54c5f4a3adbe933693badfa7cd4949cacf41e39c4bfa
 else ifeq ($(ARCH),x86_64)
   PKG_ARCH:=ac_linux_amd64
-  PKG_HASH:=3a57501ec231a0099aff0c401b573a6ebeb04ed6ea3b29a25ebc4be130695825
+  PKG_HASH:=3aa50a58680b3f7a85ba9fda2edbdd07f2a25f7456ed7d33f8ca398b083865c4
 else
   PKG_HASH:=dummy
 endif
