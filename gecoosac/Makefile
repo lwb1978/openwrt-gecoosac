@@ -1,7 +1,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=gecoosac
-PKG_VERSION:=1.0
+PKG_VERSION:=1.0.20240221
 PKG_RELEASE:=1
 
 ifeq ($(ARCH),aarch64)
@@ -14,7 +14,7 @@ else ifeq ($(ARCH),mips)
   PKG_ARCH:=ac_linux_mips
   PKG_HASH:=7b15d068ec6957d869686e058cf647678066c79586685f35c570236157964ef1
 else ifeq ($(ARCH),mipsel)
-  PKG_ARCH:=ac_linux_mipsel
+  PKG_ARCH:=ac_linux_mipsle
   PKG_HASH:=f2d8c6c0a155ae6db612f50e8442d299368c9c110f0b6c9cb9132b20bf0bddc7
 else ifeq ($(ARCH),i386)
   PKG_ARCH:=ac_linux_386
@@ -27,7 +27,7 @@ else
 endif
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(ARCH_PACKAGES)
-PKG_SOURCE_URL:=https://github.com/lwb1978/openwrt-gecoosac/releases/download/V$(PKG_VERSION)/$(PKG_ARCH)?
+PKG_SOURCE_URL:=https://github.com/lwb1978/gecoosac-core/releases/download/V$(PKG_VERSION)/$(PKG_ARCH)?
 UNPACK_CMD=$(CP) $(DL_DIR)/$(PKG_SOURCE) $(PKG_BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
 PKG_LICENSE:=AGPL-3.0-only
