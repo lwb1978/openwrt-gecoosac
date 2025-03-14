@@ -68,7 +68,7 @@ clear_upload = s:option(Button, "clear_upload", translate("Clear Upload Director
 clear_upload.inputstyle = "remove"
 clear_upload.write = function(self, section)
     local path = upload_dir:formvalue(section) or "/tmp/gecoosac/upload/"
-    luci.sys.call("rm -rf " .. path .. "*")
+    luci.sys.call("rm -rf " .. path .. "/*")
 end
 
 return m
