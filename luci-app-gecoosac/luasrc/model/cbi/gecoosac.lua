@@ -65,4 +65,10 @@ o = s:option(Flag, "log", translate("Enable Log"))
 o.default = 1
 o.rmempty = false
 
+o = s:option(Button, "clear_upload", translate("Clear Upload Directory"))
+o.inputstyle = "remove"
+o.write = function(self, section)
+    luci.sys.call("rm -rf /tmp/gecoosac/upload/*")
+end
+
 return m
