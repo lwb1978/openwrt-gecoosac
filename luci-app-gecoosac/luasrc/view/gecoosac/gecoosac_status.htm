@@ -7,53 +7,38 @@ local port = uci:get("gecoosac", "config", "port") or "60650"
 local m_port = uci:get("gecoosac", "config", "m_port") or "8080"
 local http = "http://"
 if isonlyoneprot == "0" then
-    port = m_port
-    if https == "1" then
-        http = "https://"
-    end
+	port = m_port
+	if https == "1" then
+		http = "https://"
+	end
 end
 -%>
 <script type="text/javascript">//<![CDATA[
 var Port = "<%=port%>"
 var Http = "<%=http%>"
 XHR.poll(3, '<%=url([[admin]], [[services]], [[gecoosac]], [[status]])%>', null,
-    function(x, data) {
-        var tb = document.getElementById('gecoosac_status');
-        if (data && tb) {
-            if (data.running) {
-                var links = '<font color=green><%:The GecoosAC service is running.%></font>&nbsp;&nbsp;<input class="cbi-button cbi-button-reload " type="button" value="<%:Open the mgmt page%>" onclick="openClient()">';
-                tb.innerHTML = links;
-            } else {
-                tb.innerHTML = '<font color=red><%:The GecoosAC service is not running.%></font>';
-            }
-        }
-    }
+	function(x, data) {
+		var tb = document.getElementById('gecoosac_status');
+		if (data && tb) {
+			if (data.running) {
+				var links = '<font color=green><%:The GecoosAC service is running.%></font>&nbsp;&nbsp;<input class="cbi-button cbi-button-reload " type="button" value="<%:Open the mgmt page%>" onclick="openClient();" />';
+				tb.innerHTML = links;
+			} else {
+				tb.innerHTML = '<font color=red><%:The GecoosAC service is not running.%></font>';
+			}
+		}
+	}
 );
 
 function openClient() {
-    var url = Http + window.location.hostname + ":" + Port;
-    window.open(url);
-}
-
-function clearUpload() {
-    if (confirm("Are you sure you want to clear the upload directory?")) {
-        fetch('<%=url([[admin]], [[services]], [[gecoosac]], [[clear_upload]])%>', {
-            method: 'POST'
-        }).then(response => {
-            if (response.ok) {
-                alert("Upload directory cleared successfully.");
-            } else {
-                alert("Failed to clear upload directory.");
-            }
-        });
-    }
+	var url = Http + window.location.hostname + ":" + Port;
+	window.open(url);
 }
 //]]>
 </script>
 <style>.mar-10 {margin-left: 50px; margin-right: 10px;}</style>
 <fieldset class="cbi-section">
-    <p id="gecoosac_status">
-        <em><%:Collecting data...%></em>
-    </p>
-    <button class="cbi-button cbi-button-remove" onclick="clearUpload()">Clear Upload Directory</button>
+	<p id="gecoosac_status">
+		<em><%:Collecting data...%></em>
+	</p>
 </fieldset>
